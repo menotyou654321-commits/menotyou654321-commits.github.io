@@ -1,24 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Side-by-Side Layout</title>
+  <style>
+    /* Basic page setup */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 40px 20px;
+    }
 
-<title> First Page </title>
+    .split-container {
+      display: flex;
+      align-items: center;           
+      justify-content: space-between; 
+      gap: 50px;                           
+      max-width: 1100px;             
+      margin: 0 auto;                
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    }
 
+    .text-side {
+      flex: 1;                      
+    }
+
+    .text-side h1 {
+      font-size: 2.5rem;
+      color: #111;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .text-side p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #666;
+    }
+
+    .image-side {
+      flex: 1;                       
+    }
+
+    .image-side img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;            
+    }
+
+    @media (max-width: 768px) {
+      .split-container {
+        flex-direction: column;     
+        gap: 30px;
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
-<body style="background-color:powderblue; >
+<body>
 
-<h1>This is a Heading</h1>
+  <div class="split-container">
+    
+    <!-- TEXT SIDE -->
+    <div class="text-side">
+      <h1>Welcome to My Website</h1>
+      <p>
+        This is a live example of a side-by-side layout. By using CSS Flexbox, the text dynamically balances next to the image. When you resize your browser window or view this page on a smartphone, the boxes will automatically stack vertically so your site remains completely mobile-friendly.
+      </p>
+    </div>
 
-<p">This is a <br> paragraph.</p>
+    <!-- IMAGE SIDE -->
+    <div class="image-side">
+      <!-- WARNING: Replace 'my-image.jpg' with your EXACT image filename on GitHub -->
+      <img src="AssassinIdle.png" alt="A beautiful placeholder descriptive text">
+    </div>
 
-<a href="https://www.google.com/">Link is here</a>
-
-<br>
-
-<hr>
-
-<img src="AssassinIdle.png" width="200" height="200">
+  </div>
 
 </body>
 </html>
