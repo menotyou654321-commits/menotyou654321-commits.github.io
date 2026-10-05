@@ -8,7 +8,10 @@
     body {
       font-family: sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 40px 20px;
+      background-image: linear-gradient(180deg, #ff007f, #ff6a00);
+      background-attachment: fixed;
+      min-height: 100vh;
     }
     .split-container {
       display: flex;
@@ -17,12 +20,29 @@
       max-width: 1000px;
       margin: 0 auto;
     }
-    .text-side, .image-side {
+    .text-side {
+      flex: 1;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    .text-side h1 {
+      font-size: 32px;  /* <-- Controls the size of the Heading */
+      margin-top: 0;
+    }
+    .text-side p {
+      font-size: 18px;  /* <-- Controls the size of the Paragraph text */
+      line-height: 1.5;
+    }
+    .image-side {
       flex: 1;
     }
     .image-side img {
       width: 100%;
       height: auto;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
     }
     @media (max-width: 768px) {
       .split-container {
@@ -36,10 +56,11 @@
   <div class="split-container">
     <div class="text-side">
       <h1>Heading</h1>
-      <p>Your text goes here.</p>
+      <p>JUST WANTED TO SAY HAPPY BIRTHDAY.</p>
+      <p>and wish you many more</p>
     </div>
     <div class="image-side">
-      <img src="AssassinIdle.png" alt="Image">
+      <img src="Bday.png" alt="Happy Birthday Art">
     </div>
   </div>
 
